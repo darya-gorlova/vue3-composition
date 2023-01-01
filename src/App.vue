@@ -1,26 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app">
+    <h2>1. Change color of list element to red on hover</h2>
+    <UnsortedListComp />
+    <h2>2. Change color of big box to color of small box on hover</h2>
+    <DisplayColorOnHoverComp />
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
+import { defineComponent } from "vue";
+import UnsortedListComp from "./components/UnsortedListComp.vue";
+import DisplayColorOnHoverComp from "./components/DisplayColorOnHoverComp.vue";
+export default defineComponent({
   name: "App",
-  components: {
-    HelloWorld,
-  },
-};
+  components: { UnsortedListComp, DisplayColorOnHoverComp },
+});
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
